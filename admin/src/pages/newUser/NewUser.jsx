@@ -26,7 +26,7 @@ export default function NewUser() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://admin-backend-qawz.onrender.com", userData);
+      await axios.post("http://localhost:3000/api/users", userData);
       alert("User created successfully!");
       navigate("/users"); // ✅ Redirect to user list after creation
     } catch (error) {
